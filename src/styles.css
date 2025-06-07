@@ -12,6 +12,7 @@ body {
   overflow-x: hidden;
   padding: 0;
   width: 100%;
+  scroll-behavior: smooth;
 }
 
 div#main {
@@ -124,4 +125,23 @@ a:hover {
 img.socialIcon {
   height: 30px;
   width: 30px;
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* add bounce up and down animation */
+@keyframes bounceUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
